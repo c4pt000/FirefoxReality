@@ -1,4 +1,4 @@
-include ':app'
+include ':app', ':mozillaspeechlibrary'
 
 def wavebuild = new File('third_party/wavesdk/build.gradle')
 

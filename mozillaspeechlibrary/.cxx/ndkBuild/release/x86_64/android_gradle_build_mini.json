@@ -1,0 +1,17 @@
+{
+  "buildFiles": [
+    "/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/src/main/cpp/Android.mk"
+  ],
+  "cleanCommands": [
+    "/Users/mozilla/Library/Android/sdk/ndk/20.0.5594570/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/src/main/cpp/Android.mk APP_ABI\u003dx86_64 NDK_ALL_ABIS\u003dx86_64 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-24 NDK_OUT\u003d/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/build/intermediates/ndkBuild/release/lib clean"
+  ],
+  "buildTargetsCommand": "/Users/mozilla/Library/Android/sdk/ndk/20.0.5594570/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/src/main/cpp/Android.mk APP_ABI\u003dx86_64 NDK_ALL_ABIS\u003dx86_64 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-24 NDK_OUT\u003d/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/build/intermediates/ndkBuild/release/lib {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "webrtc_jni-release-x86_64": {
+      "artifactName": "webrtc_jni",
+      "buildCommand": "/Users/mozilla/Library/Android/sdk/ndk/20.0.5594570/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/src/main/cpp/Android.mk APP_ABI\u003dx86_64 NDK_ALL_ABIS\u003dx86_64 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-24 NDK_OUT\u003d/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/build/intermediates/ndkBuild/release/lib /Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/build/intermediates/ndkBuild/release/obj/local/x86_64/libwebrtc_jni.so",
+      "abi": "x86_64",
+      "output": "/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/build/intermediates/ndkBuild/release/obj/local/x86_64/libwebrtc_jni.so"
+    }
+  }
+}

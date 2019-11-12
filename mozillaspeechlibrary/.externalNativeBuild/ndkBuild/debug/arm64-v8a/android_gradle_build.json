@@ -1,0 +1,124 @@
+{
+  "buildFiles": [
+    "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/Android.mk"
+  ],
+  "cleanCommands": [
+    "/Users/mozilla/Library/Android/sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-24 NDK_OUT\u003d/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/build/intermediates/ndkBuild/debug/lib clean"
+  ],
+  "libraries": {
+    "webrtc_jni-debug-arm64-v8a": {
+      "buildCommand": "/Users/mozilla/Library/Android/sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-24 NDK_OUT\u003d/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/build/intermediates/ndkBuild/debug/lib /Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/libwebrtc_jni.so",
+      "toolchain": "toolchain-arm64-v8a",
+      "abi": "arm64-v8a",
+      "artifactName": "webrtc_jni",
+      "files": [
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/signal_processing/complex_bit_reverse.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/signal_processing/complex_fft.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/signal_processing/cross_correlation.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/signal_processing/division_operations.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/signal_processing/downsample_fast.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/signal_processing/energy.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/signal_processing/get_scaling_square.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/signal_processing/min_max_operations.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/signal_processing/real_fft.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/signal_processing/resample.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/signal_processing/resample_48khz.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/signal_processing/resample_by_2.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/signal_processing/resample_by_2_internal.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/signal_processing/resample_fractional.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/signal_processing/spl_init.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/signal_processing/spl_sqrt.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/signal_processing/sqrt_of_one_minus_x_squared.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/signal_processing/vector_scaling_operations.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/vad/vad_core.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/vad/vad_filterbank.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/vad/vad_gmm.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/vad/vad_sp.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc/common_audio/vad/webrtc_vad.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/webrtc_jni.c",
+          "flags": "-target aarch64-none-linux-android24 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -O0 -UNDEBUG -fno-limit-debug-info -I/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp -DANDROID -DWEBRTC_ANDROID -D__ARMEL__ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        }
+      ],
+      "output": "/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/libwebrtc_jni.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-arm64-v8a": {
+      "cCompilerExecutable": "/Users/mozilla/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

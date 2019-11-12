@@ -1,0 +1,59 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "/Users/mozilla/Documents/Development/androidspeech",
+      "sdkFolder": "/Users/mozilla/Library/Android/sdk",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/build/intermediates",
+      "gradleModulePathName": ":mozillaspeechlibrary",
+      "moduleRootFolder": "/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary",
+      "makeFile": "/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/src/main/cpp/Android.mk",
+      "buildSystem": "NDK_BUILD",
+      "compilerSettingsCacheFolder": "/Users/mozilla/Documents/Development/androidspeech/.cxx",
+      "cxxFolder": "/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/.cxx",
+      "ndkFolder": "/Users/mozilla/Library/Android/sdk/ndk/20.0.5594570",
+      "ndkVersion": "20.0.5594570",
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [],
+    "cFlagList": [],
+    "cppFlagsList": [],
+    "variantName": "release",
+    "soFolder": "/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/build/intermediates/ndkBuild/release/lib",
+    "objFolder": "/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/build/intermediates/ndkBuild/release/obj/local",
+    "jsonFolder": "/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/.cxx/ndkBuild/release",
+    "gradleBuildOutputFolder": "/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/.cxx/cxx/release",
+    "isDebuggableEnabled": false,
+    "validAbiList": [
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86_64"
+    ],
+    "buildTargetSet": []
+  },
+  "abi": "X86_64",
+  "abiPlatformVersion": 24,
+  "cxxBuildFolder": "/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/.cxx/ndkBuild/release/x86_64",
+  "jsonFile": "/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/.cxx/ndkBuild/release/x86_64/android_gradle_build.json",
+  "gradleBuildOutputFolder": "/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/.cxx/cxx/release/x86_64",
+  "objFolder": "/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/build/intermediates/ndkBuild/release/obj/local/x86_64",
+  "buildCommandFile": "/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/.cxx/ndkBuild/release/x86_64/build_command.txt",
+  "buildOutputFile": "/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/.cxx/ndkBuild/release/x86_64/build_output.txt",
+  "modelOutputFile": "/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/.cxx/ndkBuild/release/x86_64/build_model.json",
+  "jsonGenerationLoggingRecordFile": "/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/.cxx/ndkBuild/release/x86_64/json_generation_record.json",
+  "compileCommandsJsonFile": "/Users/mozilla/Documents/Development/androidspeech/mozillaspeechlibrary/.cxx/ndkBuild/release/x86_64/compile_commands.json"
+}
