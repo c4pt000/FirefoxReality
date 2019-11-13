@@ -10,14 +10,14 @@ import java.io.ByteArrayOutputStream;
 
 public abstract class Networking {
 
-    String STT_ENDPOINT = "https://speaktome-2.services.mozilla.com/";
+    String STT_ENDPOINT = "http://100.81.194.147:8080/";
 
-    protected MozillaSpeechService mSpeechService;
-    protected boolean cancelled;
+    MozillaSpeechService mSpeechService;
+    boolean cancelled;
     protected Context mContext;
-    protected Handler mMainThreadHandler;
+    Handler mMainThreadHandler;
 
-    public Networking(Context aContext, MozillaSpeechService aSpeechService) {
+    Networking(Context aContext, MozillaSpeechService aSpeechService) {
         mContext = aContext;
         mMainThreadHandler = new Handler(Looper.getMainLooper());
         mSpeechService = aSpeechService;

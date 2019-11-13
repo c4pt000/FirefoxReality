@@ -1,0 +1,13 @@
+Executable : /Users/mozilla/Library/Android/sdk/ndk-bundle/ndk-build
+arguments : 
+NDK_PROJECT_PATH=null
+APP_BUILD_SCRIPT=/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/src/main/cpp/Android.mk
+APP_ABI=x86_64
+NDK_ALL_ABIS=x86_64
+NDK_DEBUG=1
+APP_PLATFORM=android-24
+NDK_OUT=/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/build/intermediates/ndkBuild/debug/obj
+NDK_LIBS_OUT=/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/build/intermediates/ndkBuild/debug/lib
+/Users/mozilla/Documents/Development/FirefoxReality/mozillaspeechlibrary/build/intermediates/ndkBuild/debug/obj/local/x86_64/libwebrtc_jni.so
+jvmArgs : 
+

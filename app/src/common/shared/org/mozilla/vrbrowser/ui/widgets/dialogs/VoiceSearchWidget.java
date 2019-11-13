@@ -90,7 +90,7 @@ public class VoiceSearchWidget extends UIDialog implements WidgetManagerDelegate
         mWidgetManager.addPermissionListener(this);
 
         mMozillaSpeechService = MozillaSpeechService.getInstance();
-        mMozillaSpeechService.enableGeckoRuntime(SessionStore.get().getRuntime());
+        mMozillaSpeechService.enableGeckoWebExecutor(SessionStore.get().getRuntime());
         mMozillaSpeechService.setProductTag(getContext().getString(R.string.voice_app_id));
 
         mVoiceSearchText1 = findViewById(R.id.voiceSearchText1);

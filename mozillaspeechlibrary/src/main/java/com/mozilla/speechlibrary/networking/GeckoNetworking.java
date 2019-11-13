@@ -31,22 +31,26 @@ public class GeckoNetworking extends Networking {
     public void doSTT(final ByteArrayOutputStream baos, NetworkSettings mNetworkSettings) {
 
         if (cancelled) {
-            mSpeechService.notifyListeners(MozillaSpeechService.SpeechState.CANCELED, null);
-            return;
+            mMainThreadHandler.post(() -> {
+                mSpeechService.notifyListeners(MozillaSpeechService.SpeechState.CANCELED, null);
+            });
         }
 
-        Looper.prepare();
         mMainThreadHandler.post(() -> {
             GeckoWebExecutor executor = new GeckoWebExecutor(mRuntime);
-            ByteBuffer buffer = DirectBufferAllocator.allocate(baos.size());
-            buffer.put(baos.toByteArray());
+            byte[] bytes = baos.toByteArray();
+            ByteBuffer buffer = DirectBufferAllocator.allocate(bytes.length);
+            buffer.put(bytes);
             WebRequest request = new WebRequest.Builder(STT_ENDPOINT)
+                    .method("POST")
+                    .uri(STT_ENDPOINT)
+                    .cacheMode(WebRequest.CACHE_MODE_NO_CACHE)
                     .body(buffer)
-                    .addHeader("Accept-Language-STT", mNetworkSettings.mLanguage)
-                    .addHeader("Store-Transcription", mNetworkSettings.mStoreTranscriptions ? "1": "0" )
-                    .addHeader("Store-Sample", mNetworkSettings.mStoreSamples ? "1": "0")
-                    .addHeader("Product-Tag", mNetworkSettings.mProductTag)
-                    .addHeader("Content-Type", "audio/3gpp")
+                    .header("Accept-Language-STT", mNetworkSettings.mLanguage)
+                    .header("Store-Transcription", mNetworkSettings.mStoreTranscriptions ? "1": "0" )
+                    .header("Store-Sample", mNetworkSettings.mStoreSamples ? "1": "0")
+                    .header("Product-Tag", mNetworkSettings.mProductTag)
+                    .header("Content-Type", "audio/3gpp")
                     .build();
 
             mSpeechService.notifyListeners(MozillaSpeechService.SpeechState.DECODING, null);
@@ -88,6 +92,7 @@ public class GeckoNetworking extends Networking {
 
             }).exceptionally(throwable -> {
                 // Exception happened
+                throwable.printStackTrace();
                 mSpeechService.notifyListeners(MozillaSpeechService.SpeechState.ERROR, String.format("An exception happened during the request: %s", throwable.getMessage()));
                 return null;
             });

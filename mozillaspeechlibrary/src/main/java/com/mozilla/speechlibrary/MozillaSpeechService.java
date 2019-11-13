@@ -41,7 +41,7 @@ public class MozillaSpeechService {
         mNetworkSettings = new NetworkSettings();
     }
 
-    public void enableGeckoRuntime(GeckoRuntime runtime) {
+    public void enableGeckoWebExecutor(GeckoRuntime runtime) {
         mRuntime = runtime;
     }
 

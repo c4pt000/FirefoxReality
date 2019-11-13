@@ -1,0 +1,25 @@
+[armeabi-v7a] Compile thumb  : webrtc_jni <= webrtc_jni.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= webrtc_vad.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= vad_core.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= vad_filterbank.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= vad_gmm.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= vad_sp.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= spl_init.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= division_operations.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= resample_48khz.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= energy.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= resample.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= resample_by_2.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= resample_fractional.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= resample_by_2_internal.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= spl_sqrt.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= sqrt_of_one_minus_x_squared.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= vector_scaling_operations.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= real_fft.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= get_scaling_square.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= downsample_fast.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= complex_fft.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= cross_correlation.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= complex_bit_reverse.c
+[armeabi-v7a] Compile thumb  : webrtc_jni <= min_max_operations.c
+[armeabi-v7a] SharedLibrary  : libwebrtc_jni.so
