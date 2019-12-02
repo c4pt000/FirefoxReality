@@ -10,7 +10,7 @@ import java.io.ByteArrayOutputStream;
 
 public abstract class Networking {
 
-    String STT_ENDPOINT = "http://100.81.194.147:8080/";
+    String STT_ENDPOINT = "http://100.81.194.93:9001/";
 
     MozillaSpeechService mSpeechService;
     boolean cancelled;

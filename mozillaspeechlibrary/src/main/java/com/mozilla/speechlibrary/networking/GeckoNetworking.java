@@ -1,7 +1,6 @@
 package com.mozilla.speechlibrary.networking;
 
 import android.content.Context;
-import android.os.Looper;
 
 import com.mozilla.speechlibrary.MozillaSpeechService;
 import com.mozilla.speechlibrary.STTResult;
@@ -19,12 +18,12 @@ import java.nio.charset.StandardCharsets;
 
 public class GeckoNetworking extends Networking {
 
-    private GeckoRuntime mRuntime;
+    private GeckoWebExecutor mExecutor;
 
     public GeckoNetworking(Context aContext, MozillaSpeechService aSpeechService, GeckoRuntime runtime) {
         super(aContext, aSpeechService);
 
-        mRuntime = runtime;
+        mExecutor = new GeckoWebExecutor(runtime);
     }
 
     @Override
@@ -37,24 +36,22 @@ public class GeckoNetworking extends Networking {
         }
 
         mMainThreadHandler.post(() -> {
-            GeckoWebExecutor executor = new GeckoWebExecutor(mRuntime);
             byte[] bytes = baos.toByteArray();
             ByteBuffer buffer = DirectBufferAllocator.allocate(bytes.length);
-            buffer.put(bytes);
             WebRequest request = new WebRequest.Builder(STT_ENDPOINT)
                     .method("POST")
                     .uri(STT_ENDPOINT)
                     .cacheMode(WebRequest.CACHE_MODE_NO_CACHE)
-                    .body(buffer)
                     .header("Accept-Language-STT", mNetworkSettings.mLanguage)
                     .header("Store-Transcription", mNetworkSettings.mStoreTranscriptions ? "1": "0" )
                     .header("Store-Sample", mNetworkSettings.mStoreSamples ? "1": "0")
                     .header("Product-Tag", mNetworkSettings.mProductTag)
                     .header("Content-Type", "audio/3gpp")
+                    .body(buffer.put(bytes))
                     .build();
 
             mSpeechService.notifyListeners(MozillaSpeechService.SpeechState.DECODING, null);
-            executor.fetch(request).then(webResponse -> {
+            mExecutor.fetch(request).then(webResponse -> {
                 String body;
                 if (webResponse != null) {
                     if (webResponse.body != null) {
@@ -74,7 +71,7 @@ public class GeckoNetworking extends Networking {
 
                         } else {
                             // called when response HTTP status is not "200"
-                            String error = String.format("Network Error: %s", webResponse.statusCode);
+                            String error = String.format("Request Error %s: %s", webResponse.statusCode, body);
                             mSpeechService.notifyListeners(MozillaSpeechService.SpeechState.ERROR, error);
                         }
 

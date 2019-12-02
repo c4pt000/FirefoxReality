@@ -53,40 +53,40 @@ class LocalDSInference implements Runnable {
     String trie;
 
     protected LocalDSInference(MozillaSpeechService aService, int aSampleRate) {
-        Log.e(this._tag, "new LocalDSInference()");
+        Log.e(_tag, "new LocalDSInference()");
 
         modelRoot = aService.getModelPath() + "/" + aService.getLanguageDir();
 
-        Log.e(this._tag, "Loading model from " + modelRoot);
+        Log.e(_tag, "Loading model from " + modelRoot);
 
         this.tfliteModel = this.modelRoot + "/" + LocalSpeechRecognition.kTfLiteModel;
         this.alphabet    = this.modelRoot + "/" + LocalSpeechRecognition.kAlphabet;
         this.LM          = this.modelRoot + "/" + LocalSpeechRecognition.kLM;
         this.trie        = this.modelRoot + "/" + LocalSpeechRecognition.kTrie;
 
-        this.clipNumber += 1;
+        clipNumber += 1;
 
-        this.keepClips  = (new File(this.modelRoot + "/.keepClips")).exists();
-        this.useDecoder = !(new File(this.modelRoot + "/.noUseDecoder")).exists();
+        keepClips  = (new File(this.modelRoot + "/.keepClips")).exists();
+        useDecoder = !(new File(this.modelRoot + "/.noUseDecoder")).exists();
 
-        Log.e(this._tag, "keepClips=" + this.keepClips);
-        Log.e(this._tag, "useDecoder=" + this.useDecoder);
+        Log.e(_tag, "keepClips=" + keepClips);
+        Log.e(_tag, "useDecoder=" + useDecoder);
 
         this.mService = aService;
 
         if (this.mModel == null) {
-            Log.e(this._tag, "new DeepSpeechModel(\"" + this.tfliteModel + "\")");
+            Log.e(_tag, "new DeepSpeechModel(\"" + this.tfliteModel + "\")");
             this.mModel = new DeepSpeechModel(this.tfliteModel, this.alphabet, BEAM_WIDTH);
         }
 
-        if (this.useDecoder) {
+        if (useDecoder) {
             this.mModel.enableDecoderWihLM(this.LM, this.trie, LM_WEIGHT, VALID_WORD_COUNT_WEIGHT);
         }
 
-        if (this.keepClips) {
+        if (keepClips) {
             try {
-                this.clipDebug = new FileOutputStream(this.modelRoot + "/clip_" + this.clipNumber + ".wav").getChannel();
-            } catch (Exception ex) {
+                this.clipDebug = new FileOutputStream(this.modelRoot + "/clip_" + clipNumber + ".wav").getChannel();
+            } catch (Exception ignored) {
             }
         }
 
@@ -95,14 +95,14 @@ class LocalDSInference implements Runnable {
     }
 
     public void closeModel() {
-        Log.e(this._tag, "closeModel()");
+        Log.e(_tag, "closeModel()");
 
         if (this.mStreamingState != null) {
-             String _ = this.mModel.finishStream(this.mStreamingState);
+             this.mModel.finishStream(this.mStreamingState);
         }
 
         if (this.mModel != null) {
-            Log.e(this._tag, "closeModel()");
+            Log.e(_tag, "closeModel()");
             this.mModel.freeModel();
         }
 
@@ -111,12 +111,12 @@ class LocalDSInference implements Runnable {
     }
 
     public void appendAudio(short[] aBuffer) {
-        Log.e(this._tag, "appendAudio()");
+        Log.e(_tag, "appendAudio()");
         if (!this.stopStream) {
-            // Log.e(this._tag, "appendAudio()::add");
+            // Log.e(_tag, "appendAudio()::add");
             this.mBuffers.add(aBuffer);
 
-            if (this.keepClips) {
+            if (keepClips) {
                 // DEBUG
                 ByteBuffer myByteBuffer = ByteBuffer.allocate(aBuffer.length * 2);
                 myByteBuffer.order(ByteOrder.LITTLE_ENDIAN);
@@ -133,9 +133,9 @@ class LocalDSInference implements Runnable {
     }
 
     public void endOfStream() {
-        Log.e(this._tag, "endOfStream()");
+        Log.e(_tag, "endOfStream()");
         this.stopStream = true;
-        if (this.keepClips) {
+        if (keepClips) {
             try {
                 this.clipDebug.close();
             } catch (Exception ex) {
@@ -144,7 +144,7 @@ class LocalDSInference implements Runnable {
     }
 
     public void run() {
-        Log.e(this._tag, "run()");
+        Log.e(_tag, "run()");
 
         while ((!this.stopStream) || (this.mBuffers.size() > 0)) {
             short[] aBuffer = this.mBuffers.poll();
@@ -156,10 +156,10 @@ class LocalDSInference implements Runnable {
             this.mModel.feedAudioContent(this.mStreamingState, aBuffer, aBuffer.length);
         }
 
-        Log.e(this._tag, "finishStream()");
+        Log.e(_tag, "finishStream()");
         mService.notifyListeners(MozillaSpeechService.SpeechState.DECODING, null);
         String finalDecoded = this.mModel.finishStream(this.mStreamingState);
-        Log.e(this._tag, "finalDecoded(" + finalDecoded.length() + ")=" + finalDecoded);
+        Log.e(_tag, "finalDecoded(" + finalDecoded.length() + ")=" + finalDecoded);
         this.mStreamingState = null;
 
         STTResult sttResult = new STTResult(finalDecoded, (float)(1.0));
@@ -203,7 +203,7 @@ class LocalSpeechRecognition implements Runnable {
 
     protected LocalSpeechRecognition(int aSampleRate, int aChannels, Vad aVad,
                                 MozillaSpeechService aService) {
-        Log.e(this._tag, "new LocalSpeechRecognition()");
+        Log.e(_tag, "new LocalSpeechRecognition()");
         this.mVad = aVad;
         this.mSampleRate = aSampleRate;
         this.mChannels = aChannels;
@@ -304,7 +304,7 @@ class LocalSpeechRecognition implements Runnable {
     }
 
     public void cancel() {
-        Log.e(this._tag, "cancel()");
+        Log.e(_tag, "cancel()");
         this.cancelled = true;
         this.done      = true;
 
