@@ -85,6 +85,7 @@ public class Session implements ContentBlocking.Delegate, GeckoSession.Navigatio
     private transient byte[] mPrivatePage;
     private transient boolean mFirstContentfulPaint;
     private transient long mKeepAlive;
+    private transient boolean mUserInitiatedNavigation;
 
     public interface BitmapChangedListener {
         void onBitmapChanged(Session aSession, Bitmap aBitmap);
@@ -629,6 +630,8 @@ public class Session implements ContentBlocking.Delegate, GeckoSession.Navigatio
     }
 
     public void goBack() {
+        mUserInitiatedNavigation = true;
+
         if (isInFullScreen()) {
             exitFullScreen();
         } else if (mState.mCanGoBack && mState.mSession != null) {
@@ -644,6 +647,8 @@ public class Session implements ContentBlocking.Delegate, GeckoSession.Navigatio
     }
 
     public void goForward() {
+        mUserInitiatedNavigation = true;
+
         if (mState.mCanGoForward && mState.mSession != null) {
             mState.mSession.goForward();
         }
@@ -672,18 +677,24 @@ public class Session implements ContentBlocking.Delegate, GeckoSession.Navigatio
     }
 
     public void reload() {
+        mUserInitiatedNavigation = true;
+
         if (mState.mSession != null) {
             mState.mSession.reload();
         }
     }
 
     public void stop() {
+        mUserInitiatedNavigation = true;
+
         if (mState.mSession != null) {
             mState.mSession.stop();
         }
     }
 
     public void loadUri(String aUri) {
+        mUserInitiatedNavigation = true;
+
         if (aUri == null) {
             aUri = getHomeUri();
         }
@@ -845,6 +856,10 @@ public class Session implements ContentBlocking.Delegate, GeckoSession.Navigatio
 
     public @NonNull SessionState getSessionState() {
         return mState;
+    }
+
+    public boolean isUserInitiatedNavigation() {
+        return mUserInitiatedNavigation;
     }
 
     // NavigationDelegate
