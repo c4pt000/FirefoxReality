@@ -289,13 +289,15 @@ public class Windows implements TrayListener, TopBarWidget.Delegate, TitleBarWid
         newWindow.getPlacement().worldWidth = aState.worldWidth;
         newWindow.setRestored(true);
         placeWindow(newWindow, aState.placement);
-        switch (aState.panelType) {
-            case BOOKMARKS:
-                newWindow.showBookmarks();
-                break;
-            case HISTORY:
-                newWindow.showHistory();
-                break;
+        if (aState.panelType != null) {
+            switch (aState.panelType) {
+                case BOOKMARKS:
+                    newWindow.showBookmarks();
+                    break;
+                case HISTORY:
+                    newWindow.showHistory();
+                    break;
+            }
         }
         updateCurvedMode(true);
 
